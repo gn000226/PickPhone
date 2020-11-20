@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deR-Zh-Mqo">
+                                <rect key="frame" x="20" y="464" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="SYS-38-eik"/>
+                                    <constraint firstAttribute="width" constant="120" id="mRG-kd-GsC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button" image="iphone-12-pro-Back"/>
+                                <state key="selected" image="iphone-12-pro-Back">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="select12Pro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEQ-BT-mGZ"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tYA-aR-JYS">
+                                <rect key="frame" x="20" y="644" width="394" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="e8L-GZ-1TZ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="42" minimumInteritemSpacing="50" id="NgA-eW-gHx">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhoneCollectionViewCell" id="vO7-GC-Ni7" customClass="PhoneCollectionViewCell" customModule="PickPhone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r8T-zl-JJD">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-R1-mYe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="DXa-HG-Dcv"/>
+                                                        <constraint firstAttribute="width" constant="50" id="VJ5-qZ-hOr"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rZq-R1-mYe" secondAttribute="bottom" id="EtE-Cz-anB"/>
+                                                <constraint firstItem="rZq-R1-mYe" firstAttribute="top" secondItem="r8T-zl-JJD" secondAttribute="top" id="ROc-Io-VbR"/>
+                                                <constraint firstItem="rZq-R1-mYe" firstAttribute="leading" secondItem="r8T-zl-JJD" secondAttribute="leading" id="eyx-xp-wp6"/>
+                                                <constraint firstAttribute="trailing" secondItem="rZq-R1-mYe" secondAttribute="trailing" id="xFJ-fa-fgZ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="">
+                                                    <nil key="value"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="nil" keyPath=""/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="pickColorView" destination="rZq-R1-mYe" id="l5k-hD-Xml"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rSg-be-Cih"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mjG-La-ihE"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB7-Fs-2ZT">
+                                <rect key="frame" x="145" y="464" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="3ie-hN-yHv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="cXk-Kr-gtl"/>
+                                    <constraint firstAttribute="width" constant="120" id="fAP-kG-4sv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="g8U-Vz-2H6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="iphone-se"/>
+                                <connections>
+                                    <action selector="selectSe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhB-Rt-U3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-vb-2tb">
+                                <rect key="frame" x="274" y="464" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="SOs-wF-Trx"/>
+                                    <constraint firstAttribute="height" constant="120" id="qD8-4a-B9z"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="iphone-12-Back"/>
+                                <connections>
+                                    <action selector="select12:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLo-V5-wHa"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone-12-Back" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-pr-5o2">
+                                <rect key="frame" x="10" y="64" width="394" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="vxJ-BT-NZQ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLl-68-wAW">
+                                <rect key="frame" x="10" y="64" width="394" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="VB0-pF-jOq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-Ub-fli">
+                                <rect key="frame" x="60" y="792" width="294" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iyY-w0-TtM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="deR-Zh-Mqo" firstAttribute="top" secondItem="ZLl-68-wAW" secondAttribute="bottom" constant="50" id="1wU-cm-3E8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZLl-68-wAW" secondAttribute="trailing" constant="10" id="4Y5-WF-sn9"/>
+                            <constraint firstItem="Cvh-vb-2tb" firstAttribute="top" secondItem="Jni-pr-5o2" secondAttribute="bottom" constant="50" id="BE5-Xm-s73"/>
+                            <constraint firstItem="tYA-aR-JYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EAx-dg-Jb2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fs-Ub-fli" secondAttribute="trailing" constant="60" id="I6D-hk-vC9"/>
+                            <constraint firstItem="Jni-pr-5o2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Itj-Ie-oxm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Fs-Ub-fli" secondAttribute="bottom" constant="20" id="KOG-oh-7wO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cvh-vb-2tb" secondAttribute="trailing" constant="20" id="Ojr-KH-nOy"/>
+                            <constraint firstItem="GB7-Fs-2ZT" firstAttribute="top" secondItem="Jni-pr-5o2" secondAttribute="bottom" constant="50" id="bGz-vN-dAr"/>
+                            <constraint firstItem="deR-Zh-Mqo" firstAttribute="top" secondItem="Jni-pr-5o2" secondAttribute="bottom" constant="50" id="coo-Du-y5I"/>
+                            <constraint firstItem="3Fs-Ub-fli" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="csf-hy-j7H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYA-aR-JYS" secondAttribute="trailing" id="eMF-nY-eJF"/>
+                            <constraint firstItem="ZLl-68-wAW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ef8-kh-f5P"/>
+                            <constraint firstItem="tYA-aR-JYS" firstAttribute="top" secondItem="deR-Zh-Mqo" secondAttribute="bottom" constant="60" id="hqL-2D-Vet"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jni-pr-5o2" secondAttribute="trailing" constant="10" id="iKq-WK-b5c"/>
+                            <constraint firstItem="ZLl-68-wAW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ic5-Ug-J8B"/>
+                            <constraint firstItem="Jni-pr-5o2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nPb-ix-Die"/>
+                            <constraint firstItem="GB7-Fs-2ZT" firstAttribute="leading" secondItem="deR-Zh-Mqo" secondAttribute="trailing" constant="5" id="tzl-uq-Qeg"/>
+                            <constraint firstItem="deR-Zh-Mqo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yje-zY-NyI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bt12" destination="Cvh-vb-2tb" id="2pB-ll-znF"/>
+                        <outlet property="bt12Pro" destination="deR-Zh-Mqo" id="8XH-bs-E0X"/>
+                        <outlet property="btSe" destination="GB7-Fs-2ZT" id="NUR-SI-FFk"/>
+                        <outlet property="colorCollectionView" destination="tYA-aR-JYS" id="Ni5-lG-Ql4"/>
+                        <outlet property="colorCollectionViewFlowLayout" destination="NgA-eW-gHx" id="xos-cT-ebs"/>
+                        <outlet property="ivPhoneBackground" destination="Jni-pr-5o2" id="Ia1-Qg-EfK"/>
+                        <outlet property="lbPhone" destination="3Fs-Ub-fli" id="qeN-Ic-0uy"/>
+                        <outlet property="phoneColorView" destination="ZLl-68-wAW" id="3Zr-rm-lDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone-12-Back" width="940" height="1112"/>
+        <image name="iphone-12-pro-Back" width="940" height="1112"/>
+        <image name="iphone-se" width="940" height="1112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
