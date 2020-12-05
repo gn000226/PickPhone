@@ -74,6 +74,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         colorImageView.frame = phoneColorView.bounds
         phoneColorView.backgroundColor = UIColor(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 0))
         phoneColorView.mask = colorImageView    //.mask > 遮罩
+        
+        self.lbPhone.text = "iPhone12Pro"
+        self.lbPhone.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
     /* 點擊顯示圖片Se **/
     @IBAction func selectSe(_ sender: UIButton) {
@@ -86,6 +89,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         colorImageView.frame = phoneColorView.bounds
         phoneColorView.backgroundColor = UIColor(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 0))
         phoneColorView.mask = colorImageView    //.mask > 遮罩
+        
+        self.lbPhone.text = "iPhoneSE"
+        self.lbPhone.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
     /* 點擊顯示圖片12 **/
     @IBAction func select12(_ sender: UIButton) {
@@ -96,6 +102,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         colorImageView.frame = phoneColorView.bounds
         phoneColorView.backgroundColor = UIColor(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 0))
         phoneColorView.mask = colorImageView
+
+        self.lbPhone.text = "iPhone12"
+        self.lbPhone.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
 }
 
